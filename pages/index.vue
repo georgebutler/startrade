@@ -1,6 +1,9 @@
 <template>
-  <div class="container">
-    <div>Hello!</div>
+  <div>
+    <Navbar />
+    <div>
+      <div>Hello!</div>
+    </div>
   </div>
 </template>
 

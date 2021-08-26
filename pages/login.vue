@@ -1,13 +1,16 @@
 <template>
   <div>
-    <div>Token</div>
+    <Navbar />
     <div>
-      <input v-model="token" type="password" class="bg-gray-200 rounded">
-    </div>
-    <div>
-      <button class="bg-gray-200 rounded px-3 py-2" @click="submit">
-        Log In
-      </button>
+      <div>
+        <div>Token</div>
+        <input v-model="token" type="password" class="bg-gray-200">
+      </div>
+      <div>
+        <button class="bg-gray-200 px-3 py-2" @click="submit">
+          Log In
+        </button>
+      </div>
     </div>
   </div>
 </template>
