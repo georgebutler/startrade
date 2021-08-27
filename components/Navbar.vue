@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-gray-300">
     <NuxtLink to="/" class="font-bold">
       Home
     </NuxtLink>

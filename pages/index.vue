@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <div v-if="user">
+    <div v-if="isAuthed">
       <div>{{ user.username }}</div>
       <div>Credits: {{ user.credits }}</div>
     </div>
@@ -11,6 +11,9 @@
 <script>
 export default {
   computed: {
+    isAuthed () {
+      return this.$store.state.auth.token.length > 0
+    },
     user () {
       return this.$store.state.auth.user
     }

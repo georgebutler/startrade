@@ -15,7 +15,11 @@ export const mutations = {
 export const actions = {
   verifyToken ({ commit }, payload) {
     return new Promise((resolve, reject) => {
-      this.$axios.$get('https://api.spacetraders.io/my/account', { params: { token: payload.token } })
+      if (payload.token === '') {
+        reject(Error('missingToken'))
+      }
+
+      this.$axios.$get('my/account', { params: { token: payload.token } })
         .then((res) => {
           resolve(res)
         })
