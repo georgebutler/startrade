@@ -1,19 +1,23 @@
 <template>
   <div>
     <Navbar />
-    <div v-if="user">
-      <div>{{ user.username }}</div>
-      <div>Credits: {{ user.credits }}</div>
-    </div>
   </div>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      loans: []
+    }
+  },
   computed: {
     user () {
       return this.$store.state.auth.user
     }
+  },
+  mounted () {
+    console.log('yea')
   }
 }
 </script>

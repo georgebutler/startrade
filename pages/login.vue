@@ -29,7 +29,9 @@ export default {
       this.$store.dispatch('auth/verifyAndSetToken', {
         token: this.token
       }).then(() => {
-        alert('Token verified and saved!')
+        this.$router.push({
+          path: '/loans'
+        })
       }).catch((e) => {
         alert(e)
       }).finally(() => {
